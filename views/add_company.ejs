@@ -1,0 +1,34 @@
+<h1>COmpany Detail</h1>
+<form action="/save_company" method="post" enctype="multipart/form-data">
+    Company Name
+    <input type="text" name="company_name"><br><br>
+    Company Contact No
+    <input type="text" name="company_contact_no"><br><br>
+    Company Email
+    <input type="text" name="company_email"><br><br>
+    Company Logo
+    <input type="file" name="company_logo"><br><br>
+    Company Address
+    <input type="text" name="comapny_address"><br><br>
+    <button>Submit</button>
+</form>
+<table>
+    <tr>
+        <th>Sn</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>EMail</th>
+        <th>Address</th>
+        <th>Logo</th>
+    </tr>
+    <% for(var i=0;i<companies.length;i++){%>
+        <tr>
+            <td><%= i+1 %></td>
+            <td><%= companies[i].company_name %></td>
+            <td><%= companies[i].company_contact_no %></td>
+            <td><%= companies[i].company_email %></td>
+            <td><%= companies[i].comapny_address %></td>
+            <td><%= companies[i].company_logo %></td>
+        </tr>
+   <% }%>
+</table>
